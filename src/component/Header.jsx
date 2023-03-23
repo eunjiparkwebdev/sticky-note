@@ -5,7 +5,7 @@ function Header() {
     <header>
       <h1>
         <HighlightIcon />
-        Skicky Note
+        Sticky Note
       </h1>
     </header>
   );
