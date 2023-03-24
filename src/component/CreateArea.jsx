@@ -2,7 +2,7 @@ import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { Zoom } from "@mui/material";
 
-function CreateArea(props) {
+const CreateArea = ({ onAdd }) => {
   const [isExpanded, setExpanded] = useState(false);
 
   const [note, setNote] = useState({
@@ -22,7 +22,7 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    props.onAdd(note);
+    onAdd(note);
     setNote({
       title: "",
       content: "",
@@ -62,6 +62,6 @@ function CreateArea(props) {
       </form>
     </div>
   );
-}
+};
 
 export default CreateArea;
